@@ -9,25 +9,22 @@ function compute() {
         "at an interest rate of <mark>" + rate + "</mark>,<br/>" +
         "You will receive an amount of <mark>" + interest + "</mark>,<br/> " +
         "in the year <mark>" + yearInTheFuture + "</mark>";
-
-}
-
-
-function getSliderValue() {
-    document.getElementById("rateSpan").innerHTML = document.getElementById("rate").value;
-}
-
-
-function validateAmount() {
+    
+    // Validate Amount
     var principal = document.getElementById("principal").value;
     var biggerThanZero = parseInt(principal) > 0;
     if (!biggerThanZero) {
         alert("Enter a positive number");
         document.getElementById("principal").focus();
     }
-    if (principal=="" && principal == 0){
+    if (principal==""){
        alert("Enter a positive number");
         document.getElementById("principal").focus();
     }
 
+}
+
+
+function getSliderValue() {
+    document.getElementById("rateSpan").innerHTML = document.getElementById("rate").value;
 }
